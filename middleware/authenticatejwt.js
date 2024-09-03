@@ -17,7 +17,6 @@ const verifyToken = (req, res, next) => {
 
     try {
         const decodedPayload = jwt.verify(token, SECRET_KEY);
-
         if (!decodedPayload)
             return res.status(401).json({ error: "Token is Invalid" });
 
