@@ -1,5 +1,4 @@
 const userMapper = require("../mappers/userMapper");
-const productModal = require("../modals/product");
 const generateToken = require("../middleware/createJwt");
 exports.signup = async ({ name, email, password }) => {
   try {
