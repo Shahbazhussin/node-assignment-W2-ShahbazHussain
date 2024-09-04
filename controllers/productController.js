@@ -61,7 +61,7 @@ exports.deleteAProduct = async (req, res) => {
     await productServices.deleteProduct(prodId);
     return res.status(200).json({ message: "Product deleted Successfully" });
   } catch (err) {
-    return res.status(500).json({
+    return res.status(400).json({
       error: "Delete operation denied",
       error: err.message,
     });
