@@ -1,5 +1,5 @@
 const userMapper = require("../mappers/userMapper");
-const generateToken = require("../middleware/createJwt");
+const generateToken = require("../utils/createJwt");
 exports.signup = async ({ name, email, password }) => {
   try {
     const checkUserExistence = await userMapper.findByEmail(email);
